@@ -5,7 +5,7 @@ import path from "path";
 export default defineConfig({
     // Đường dẫn gốc khi deploy (gh-pages cần đúng path)
     // base: "/f8-zoom-module-01",
-    base: process.env.NODE_EVN === "production" ? "/f8-module-01" : "/",
+    base: process.env.NODE_EVN === "production" ? "./f8-module-01" : "./",
 
     // Thư mục chính chứa HTML, SCSS, JS
     root: "src",
@@ -15,7 +15,7 @@ export default defineConfig({
 
     build: {
         // Nơi xuất ra sản phẩm sau khi build
-        outDir: "../dist",
+        outDir: "./dist",
         emptyOutDir: true,
 
         // Khai báo các trang cần build (nhiều trang)
