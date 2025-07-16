@@ -1,0 +1,166 @@
+@use "../abstracts";
+
+.blog-section {
+  padding: 70px 0;
+
+  @include abstracts.screen(md) {
+    padding: 40px 0;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    text-align: center;
+
+    @include abstracts.screen(md) {
+      gap: 10px;
+    }
+  }
+
+  &__heading {
+    width: 580px;
+    max-width: 100%;
+
+    @include abstracts.screen(md) {
+      font-size: 3.5rem;
+      line-height: 1.2;
+    }
+  }
+
+  &__description {
+    width: 420px;
+    max-width: 100%;
+
+    @include abstracts.screen(md) {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+  }
+
+  &__posts {
+    margin: 70px 0 150px;
+
+    @include abstracts.screen(md) {
+      margin: 35px 0 50px;
+    }
+  }
+
+  .blogs-post-card {
+    &__item {
+      padding: 10px 10px 30px;
+      border-radius: 10px;
+      background: #fff;
+      box-shadow: 3px 6px 60px -20px rgba(0, 0, 0, 0.2);
+
+      &:hover {
+        border-color: transparent;
+        box-shadow: 0px 18px 64px 0px rgba(14, 20, 18, 0.07);
+      }
+    }
+
+    &__image-link {
+      position: relative;
+      display: block;
+      padding-top: 85%;
+    }
+
+    &__image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    &__content {
+      padding: 35px 25px 0;
+
+      @include abstracts.screen(md) {
+        padding: 20px 15px 0;
+      }
+    }
+
+    &__meta {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+
+      &-icon {
+        @include abstracts.screen(md) {
+          width: 20px;
+        }
+      }
+
+      &-date {
+        color: #000;
+        font-weight: 500;
+
+        @include abstracts.screen(md) {
+          font-size: 1.4rem;
+        }
+      }
+    }
+
+    &__title {
+      margin-top: 20px;
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1.5;
+
+      @include abstracts.screen(md) {
+        margin-top: 15px;
+        font-size: 1.8rem;
+      }
+    }
+
+    &__text {
+      margin-top: 15px;
+      color: #586863;
+      font-weight: 500;
+      line-height: 1.75;
+
+      @include abstracts.screen(md) {
+        margin-top: 12px;
+        font-size: 1.4rem;
+        line-height: 1.7;
+      }
+    }
+
+    &__read-more-btn {
+      position: relative;
+      display: inline-block;
+      margin-top: 20px;
+      color: var(--color-secondary);
+      font-weight: 500;
+      line-height: 1.75;
+      text-transform: uppercase;
+      text-decoration: none;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0%;
+        height: 2px;
+        background-color: var(--color-secondary);
+        transition: width 0.3s ease-in-out;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+    }
+  }
+  
+  &__actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 55px;
+  }
+}

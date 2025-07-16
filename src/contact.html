@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Justice</title>
+
+    <%- include("./partials/head.ejs") %>
+  </head>
+  <body>
+    <%- include("./partials/header.ejs") %>
+
+    <main>
+      <section class="contact-us-section">
+        <div class="container">
+          <div class="contact-us-section__header">
+            <p class="sub-title contact-us-section__subtitle">Contact Us</p>
+            <h1 class="heading-secondary contact-us-section__heading">
+              We Are Always Ready To Hear From You.
+            </h1>
+            <p class="description contact-us-section__description">
+              The right move at the right time saves your investment. Live the
+              dream of expanding your business.
+            </p>
+          </div>
+
+          <form action="#" method="POST" class="contact-us-section__form">
+            <div class="form__row">
+              <div class="form__group">
+                <div class="form__text-input">
+                  <input
+                    type="text"
+                    placeholder="Enter your name"
+                    class="form__input"
+                    aria-label="Enter your name"
+                  />
+                </div>
+              </div>
+              <div class="form__group">
+                <div class="form__text-input">
+                  <input
+                    type="text"
+                    placeholder="Company (optional)"
+                    class="form__input"
+                    aria-label="Company (optional)"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="form__group">
+                <div class="form__text-input">
+                  <input
+                    type="email"
+                    placeholder="Your email"
+                    class="form__input"
+                    aria-label="Your email"
+                  />
+                </div>
+              </div>
+              <div class="form__group">
+                <div class="form__text-input">
+                  <input
+                    type="tel"
+                    placeholder="Phone number"
+                    class="form__input"
+                    aria-label="Phone number"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="form__group">
+              <div class="form__text-area">
+                <textarea
+                  placeholder="Tell us about yourself"
+                  class="form__text-area-input"
+                  aria-label="Tell us about yourself"
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="contact-form__footer">
+              <button
+                type="submit"
+                class="button button--primary contact-us-section__button"
+              >
+                Contact us
+              </button>
+              <p>
+                By clicking the contact us button, you agree to our terms and
+                policy.
+              </p>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <%- include("./partials/footer.ejs") %>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

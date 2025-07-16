@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "dev": "vite",
+    "preview": "vite preview",
+    "deploy": "vite build && gh-pages -d dist"
+  },
+  "dependencies": {
+    "gh-pages": "^6.3.0",
+    "sass": "^1.89.2",
+    "vite": "^7.0.3",
+    "vite-plugin-ejs": "^1.7.0"
+  }
+}

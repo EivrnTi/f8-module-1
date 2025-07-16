@@ -1,0 +1,59 @@
+@use "../abstracts";
+
+// CTA
+.cta {
+    padding: 100px 0;
+    background: #017848;
+    text-align: center;
+    color: #fff;
+
+    @include abstracts.screen(md) {
+        padding: 40px;
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__heading {
+        max-width: 580px;
+
+        @include abstracts.screen(md) {
+            font-size: 2rem;
+            line-height: 1.25;
+        }
+    }
+
+    &__sub-title {
+        @include abstracts.screen(md) {
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+    }
+
+    &__description {
+        margin-top: 20px;
+        max-width: 480px;
+        color: #fff;
+
+        @include abstracts.screen(md) {
+            margin-top: 10px;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+    }
+
+    &__button {
+        margin-top: 40px;
+
+        @include abstracts.screen(md) {
+            height: 35px;
+            margin-top: 25px;
+
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+    }
+}

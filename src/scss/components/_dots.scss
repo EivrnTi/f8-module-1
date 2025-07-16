@@ -1,0 +1,22 @@
+.dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #e0e0e0;
+
+  &--active {
+    background: #eb5757;
+  }
+
+  &:hover {
+    background: #eb5757;
+    cursor: pointer;
+  }
+}

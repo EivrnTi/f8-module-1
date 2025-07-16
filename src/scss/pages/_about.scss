@@ -1,0 +1,419 @@
+@use "../abstracts";
+
+.about__section {
+  padding: 150px 0 75px;
+
+  @include abstracts.screen(md) {
+    padding: 50px 0 25px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+
+  &__heading {
+    @include abstracts.screen(md) {
+      font-size: 3rem;
+      line-height: 1.2;
+    }
+  }
+
+  &__description {
+    width: 480px;
+    max-width: 100%;
+    margin: 20px 0 30px;
+
+    @include abstracts.screen(md) {
+      margin: 10px 0 20px;
+      font-size: 1.2rem;
+      line-height: 1.75;
+    }
+  }
+
+  &__button {
+    @include abstracts.screen(md) {
+      --height: 40px;
+
+      font-size: 1.3rem;
+    }
+  }
+
+  &__media {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 20px;
+      left: -15px;
+      z-index: -1;
+
+      display: block;
+      width: 560px;
+      max-width: 100%;
+      height: 700px;
+      border-radius: 285px;
+      background: #f8ebc9;
+
+      @include abstracts.screen(lg) {
+        top: 10px;
+        left: 0;
+      }
+    }
+  }
+
+  &__image {
+    width: 560px;
+    max-width: 100%;
+    height: 700px;
+    padding-left: 15px;
+
+    border-radius: 285px;
+    object-fit: cover;
+
+    @include abstracts.screen(md) {
+      display: flex;
+      margin-left: auto;
+
+      width: 500px;
+    }
+  }
+}
+
+// Data Project
+.statistics-section {
+  margin: 75px 0;
+  color: #fff;
+
+  @include abstracts.screen(md) {
+    margin: 25px 0;
+  }
+
+  &__inner {
+    padding: 70px 0;
+    border-radius: 30px;
+    background: var(--color-primary);
+
+    @include abstracts.screen(md) {
+      padding: 40px 0;
+    }
+  }
+  .statistic {
+    &-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+
+      &__quantity {
+        font-size: 6rem;
+        font-weight: 800;
+        font-family: var(--font-roboto-slab);
+        line-height: 1.2;
+      }
+
+      &__label {
+        font-size: 1.8rem;
+        line-height: 1.7;
+      }
+    }
+  }
+}
+
+// Best Experience
+.experience-section {
+  padding: 75px 0;
+
+  @include abstracts.screen(md) {
+    padding: 25px 0;
+  }
+
+  &__media {
+    position: relative;
+
+    padding-top: 100%;
+
+    @include abstracts.screen(lg) {
+      width: 560px;
+      max-width: 100%;
+      height: 560px;
+    }
+
+    @include abstracts.screen(md) {
+      width: initial;
+      height: initial;
+      max-width: initial;
+
+      padding-top: 100%;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: -30px;
+      bottom: -30px;
+      z-index: -1;
+      width: 550px;
+      max-width: 100%;
+      height: 100%;
+
+      border-radius: 75px;
+      background: #fed464;
+
+      @include abstracts.screen(md) {
+        right: 0;
+        width: 90%;
+      }
+    }
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 70px;
+    object-fit: cover;
+
+    @include abstracts.screen(md) {
+      padding-right: 20px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    padding-left: 100px;
+
+    @include abstracts.screen(xl) {
+      padding-left: 50px;
+    }
+
+    @include abstracts.screen(lg) {
+      padding-left: 20px;
+    }
+
+    @include abstracts.screen(md) {
+      padding: 50px 0 0;
+    }
+  }
+
+  &__subtitle {
+    @include abstracts.screen(md) {
+      font-size: 1.5rem;
+      line-height: 1.75;
+    }
+  }
+
+  &__heading {
+    margin-top: 6px;
+
+    @include abstracts.screen(md) {
+      margin-top: 5px;
+      font-size: 3rem;
+      line-height: 1.3;
+    }
+  }
+
+  &__description {
+    margin: 20px 0 30px;
+
+    @include abstracts.screen(md) {
+      margin: 12px 0 16px;
+      font-size: 1.2rem;
+      line-height: 1.75;
+    }
+  }
+
+  &__button {
+    @include abstracts.screen(md) {
+      --height: 42px;
+
+      font-size: 1.3rem;
+    }
+  }
+}
+
+// Contact Us
+.contact-section {
+  padding: 75px 0;
+
+  @include abstracts.screen(md) {
+    padding: 25px 0;
+  }
+
+  &__inner {
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+    max-width: 100%;
+  }
+
+  &__header {
+    width: 520px;
+    max-width: 100%;
+  }
+
+  &__subtitle {
+    @include abstracts.screen(md) {
+      font-size: 1.2rem;
+      line-height: 1.75;
+    }
+  }
+
+  &__heading {
+    margin-top: 12px;
+
+    @include abstracts.screen(md) {
+      font-size: 3rem;
+      line-height: 1.3;
+    }
+  }
+
+  &__description {
+    margin-top: 20px;
+
+    @include abstracts.screen(md) {
+      font-size: 1.2rem;
+      line-height: 1.75;
+    }
+  }
+
+  .contact {
+    &-form {
+      margin-top: 40px;
+
+      &__footer {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        margin-top: 60px;
+
+        @include abstracts.screen(sm) {
+          flex-direction: column-reverse;
+          align-items: flex-start;
+        }
+      }
+    }
+  }
+}
+
+// About Attorneys
+.attorneys-section {
+  padding: 75px 0 150px;
+
+  @include abstracts.screen(md) {
+    padding: 25px 0 50px;
+  }
+
+  &__header {
+    margin-left: auto;
+    margin-right: auto;
+    width: 480px;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  &__subtitle {
+    color: #586863;
+
+    @include abstracts.screen(md) {
+      font-size: 1.2rem;
+      line-height: 1.75;
+    }
+  }
+
+  &__heading {
+    margin-top: 6px;
+
+    @include abstracts.screen(md) {
+      font-size: 3rem;
+      line-height: 1.3;
+    }
+  }
+
+  &__list {
+    margin-top: 70px;
+  }
+
+  .attorney-card {
+    &__item {
+      overflow: hidden;
+
+      border: 1px solid #f9f6f6;
+
+      border-radius: 15px;
+
+      &:hover {
+        border-color: transparent;
+        box-shadow: 0px 18px 64px 0px rgba(14, 20, 18, 0.07);
+      }
+    }
+
+    &__image-link {
+      position: relative;
+      display: block;
+      padding-top: 95%;
+    }
+
+    &__image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+    }
+
+    &__info {
+      position: relative;
+      padding: 20px 20px 30px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -15px;
+        left: -15px;
+        display: block;
+        width: 140%;
+        height: 165px;
+        background: #fff;
+        transform: skew(5deg, -5deg);
+        padding: 53px 20px;
+
+        @include abstracts.screen(lg) {
+          bottom: -40px;
+          height: 180px;
+        }
+
+        @include abstracts.screen(sm) {
+          bottom: -20px;
+        }
+      }
+    }
+
+    &__name {
+      position: relative;
+
+      font-size: 2.4rem;
+      font-weight: 700;
+      font-family: var(--font-roboto-slab);
+      line-height: 1.4;
+    }
+
+    &__title {
+      position: relative;
+
+      margin-top: 6px;
+      color: #586863;
+      line-height: 1.75;
+    }
+  }
+}

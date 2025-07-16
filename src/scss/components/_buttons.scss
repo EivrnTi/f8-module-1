@@ -1,0 +1,163 @@
+@use "../abstracts";
+// Button
+.button {
+  --height: 60px;
+
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+  min-width: 135px;
+  height: var(--height);
+  padding: 0 30px;
+  border-radius: 6px;
+
+  font-size: 1.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+  user-select: none;
+  z-index: 1;
+  
+  @include abstracts.screen(md) {
+    font-size: 1.8rem;
+    height: 30px;
+    padding: 0 20px;
+  }
+
+  @include abstracts.screen(sm) {
+    font-size: 1.4rem;
+    height: 20px;
+    padding: 0 20px;
+  }
+
+  + .btn {
+    &:not(.btn--no-margin) {
+      margin-left: 20px;
+    }
+  }
+
+  // Button Modifiers
+  &--text {
+    background: transparent;
+    color: var(--text-color, #fff);
+    &:hover {
+      color: var(--color-secondary);
+    }
+  }
+
+  &--primary {
+    background: var(--color-secondary);
+    color: #fff;
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  &--outline {
+    background: transparent;
+    border: 1px solid #e0e0e0;
+    color: var(--color-dark-text, #333);
+    &:hover {
+      color: var(--color-secondary);
+    }
+  }
+
+  &--rounded {
+    border-radius: 999px;
+  }
+
+  &--danger {
+    color: #fff;
+    background: #ed4337;
+    &:hover {
+      color: #ed4337;
+    }
+  }
+
+  &[disabled],
+  &--disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #ffa500;
+    border-radius: 6px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-out;
+    z-index: -1;
+  }
+
+  &:hover::after {
+    transform: scaleX(1);
+  }
+}
+
+.button--icon {
+  padding: 15px 20px;
+  border-radius: 6px;
+  background: var(--color-secondary);
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #ffa500;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-out;
+    z-index: -1;
+  }
+
+  &:hover::after {
+    transform: scaleX(1);
+  }
+}
+
+.subscribe__btn {
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #ffa500;
+    border-radius: 6px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-out;
+    z-index: -1;
+  }
+
+  &:hover::after {
+    transform: scaleX(1);
+  }
+}

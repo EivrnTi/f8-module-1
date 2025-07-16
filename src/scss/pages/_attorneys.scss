@@ -1,0 +1,262 @@
+@use "../abstracts";
+
+.hero-attorneys {
+  padding: 40px 0 100px;
+  background: #f8ebc9;
+
+  @include abstracts.screen(md) {
+    padding-bottom: 40px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    max-width: 100%;
+    margin-right: 80px;
+
+    @include abstracts.screen(lg) {
+      margin-right: 0;
+    }
+  }
+
+  &__subtitle {
+    @include abstracts.screen(md) {
+      font-size: 1.2rem;
+      line-height: 1.75;
+    }
+  }
+
+  &__heading {
+    margin-top: 15px;
+
+    @include abstracts.screen(md) {
+      font-size: 4.2rem;
+      line-height: 1.2;
+    }
+  }
+
+  &__description {
+    margin-top: 20px;
+
+    @include abstracts.screen(md) {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      line-height: 1.75;
+    }
+  }
+
+  &__scroll {
+    &-link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+
+      margin-top: 70px;
+
+      @include abstracts.screen(md) {
+        gap: 5px;
+        margin-top: 35px;
+      }
+    }
+
+    &-icon {
+      @include abstracts.screen(md) {
+        width: 20px;
+      }
+    }
+
+    &-text {
+      font-size: 1.8rem;
+      line-height: 1.7;
+
+      @include abstracts.screen(md) {
+        font-size: 1.3rem;
+        line-height: 1.75;
+      }
+    }
+  }
+
+  &__image-wrapper {
+    position: relative;
+    padding-top: 100%;
+
+    @include abstracts.screen(lg) {
+      margin-left: 60px;
+      padding-top: 85%;
+    }
+
+    @include abstracts.screen(md) {
+      margin-left: 30px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: inline-block;
+      width: 20px;
+      height: 220px;
+      background: var(--color-secondary);
+
+      @include abstracts.screen(md) {
+        width: 10px;
+        height: 120px;
+      }
+    }
+  }
+
+  &__decorative-image {
+    position: absolute;
+    top: 50%;
+    left: -70px;
+    width: 30%;
+    height: 30%;
+    z-index: 1;
+
+    transform: translateY(-50%);
+
+    @include abstracts.screen(lg) {
+      left: -100px;
+      width: 30%;
+      height: 30%;
+    }
+  }
+
+  &__main-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+// Team
+.team-attorneys {
+  padding: 100px 0;
+  background: var(--color-primary);
+
+  @include abstracts.screen(md) {
+    padding: 40px 0 50px;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__subtitle {
+    color: var(--color-secondary);
+
+    @include abstracts.screen(md) {
+      font-size: 1.2rem;
+      line-height: 1.75;
+    }
+  }
+
+  &__heading,
+  &__description {
+    width: 470px;
+    max-width: 100%;
+  }
+
+  &__heading {
+    color: #fff;
+
+    @include abstracts.screen(md) {
+      font-size: 3rem;
+      line-height: 1.3;
+    }
+  }
+
+  &__description {
+    color: #beccc7;
+
+    @include abstracts.screen(md) {
+      margin-top: 15px;
+      font-size: 1.2rem;
+      line-height: 1.75;
+    }
+  }
+
+  &__list {
+    margin-top: 70px;
+
+    @include abstracts.screen(md) {
+      margin-top: 40px;
+    }
+  }
+
+  .attorney-card {
+    &__image-wrapper {
+      position: relative;
+    }
+
+    &__link-overlay {
+      position: relative;
+      display: block;
+      padding-top: 100%;
+    }
+
+    &__image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &__view-profile-btn {
+      position: absolute;
+      left: 50%;
+      bottom: 30px;
+
+      transform: translateX(-50%);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity ease-in-out 0.4s;
+    }
+
+    &__item:hover .attorney-card__view-profile-btn {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &__info {
+      padding: 20px 20px 0;
+    }
+
+    &__name {
+      color: #fff;
+      font-size: 2.2rem;
+      font-weight: 700;
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    &__title {
+      color: #beccc7;
+      line-height: 1.75;
+      text-align: center;
+    }
+  }
+
+  &__btn-row {
+    justify-content: center;
+  }
+
+  &__btn {
+    @include abstracts.screen(md) {
+      margin-top: 40px;
+    }
+  }
+}

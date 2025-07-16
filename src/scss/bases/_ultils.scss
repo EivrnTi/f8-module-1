@@ -1,0 +1,127 @@
+$breakpoints: (
+  xxl: 1400px,
+  xl: 1200px,
+  lg: 992px,
+  md: 768px,
+  sm: 576px,
+);
+
+$display-values: (
+  block,
+  inline,
+  inline-block,
+  flex,
+  inline-flex,
+  grid,
+  inline-grid,
+  table,
+  table-cell,
+  none
+);
+
+@mixin make-display($breakpoint: null) {
+  $infix: if($breakpoint, "-#{$breakpoint}", "");
+
+  @each $display in $display-values {
+    .d#{$infix}-#{$display} {
+      display: $display !important;
+    }
+  }
+}
+
+@mixin make-visibility($breakpoint: null) {
+  $infix: if($breakpoint, "-#{$breakpoint}", "");
+  
+  .visible#{$infix} {
+    visibility: visible !important;
+  }
+  
+  .invisible#{$infix} {
+    visibility: hidden !important;
+  }
+}
+
+@mixin make-overflow($breakpoint: null) {
+  $infix: if($breakpoint, "-#{$breakpoint}", "");
+  
+  $overflow-values: auto, hidden, visible, scroll;
+  
+  @each $overflow in $overflow-values {
+    .overflow#{$infix}-#{$overflow} {
+      overflow: $overflow !important;
+    }
+    
+    .overflow-x#{$infix}-#{$overflow} {
+      overflow-x: $overflow !important;
+    }
+    
+    .overflow-y#{$infix}-#{$overflow} {
+      overflow-y: $overflow !important;
+    }
+  }
+}
+
+@mixin make-position($breakpoint: null) {
+  $infix: if($breakpoint, "-#{$breakpoint}", "");
+  
+  $position-values: static, relative, absolute, fixed, sticky;
+  
+  @each $position in $position-values {
+    .position#{$infix}-#{$position} {
+      position: $position !important;
+    }
+  }
+}
+
+@include make-display();
+@include make-visibility();
+@include make-overflow();
+@include make-position();
+
+@each $breakpoint, $dimension in $breakpoints {
+  @media (max-width: ($dimension - 0.02)) {
+    @include make-display($breakpoint);
+    @include make-visibility($breakpoint);
+    @include make-overflow($breakpoint);
+    @include make-position($breakpoint);
+  }
+}
+
+@media print {
+  @each $display in $display-values {
+    .d-print-#{$display} {
+      display: $display !important;
+    }
+  }
+}
+
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.sr-only-focusable:focus {
+  position: static !important;
+  width: auto !important;
+  height: auto !important;
+  padding: inherit !important;
+  margin: inherit !important;
+  overflow: visible !important;
+  clip: auto !important;
+  white-space: normal !important;
+}
+
+@mixin make-all-utilities($breakpoint: null) {
+  @include make-display($breakpoint);
+  @include make-visibility($breakpoint);
+  @include make-overflow($breakpoint);
+  @include make-position($breakpoint);
+}
+

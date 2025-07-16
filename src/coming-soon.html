@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <%- include( "./partials/head.ejs") %>
+  </head>
+  <body>
+    <div class="wrapper">
+      <%- include("./partials/header.ejs") %>
+
+      <main>
+        <div class="wrapper">
+          <section class="coming-soon">
+            <div class="container">
+              <div class="coming-soon__inner">
+                <h1 class="heading-primary coming-soon__header">Coming Soon</h1>
+                <p class="description coming-soon__description">
+                  Are you Ready to get something new from us. Then subscribe the
+                  news latter to get latest updates?
+                </p>
+
+                <form action="" class="form coming-soon__form">
+                  <div class="form__group--inline coming-soon__inline">
+                    <div class="form__text-input coming-soon__text-input">
+                      <input
+                        type="email"
+                        placeholder="Enter your email"
+                        class="form__input coming-soon__input"
+                      />
+                    </div>
+                    <button class="button button--primary coming-soon__button">
+                      Subscribe
+                    </button>
+                  </div>
+                </form>
+                <p class="coming-soon__auth">
+                  The latest Law News.
+                  <a href="#!" class="coming-soon__auth-link"
+                    >Stright to your inbox</a
+                  >
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <!-- Footer -->
+    <%- include("./partials/footer.ejs") %>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

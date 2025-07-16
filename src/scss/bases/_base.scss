@@ -1,0 +1,77 @@
+:root {
+    --font-roboto-slab: "Roboto Slab", serif;
+
+    --color-primary: #0e1412;
+    --color-secondary: #fd6038;
+}
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: "Manrope", sans-serif;
+    color: var(--color-primary);
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+a,
+img,
+input,
+button,
+textarea,
+select {
+    padding: 0;
+    border: none;
+    outline: none;
+    color: inherit;
+    background: transparent;
+    font-family: inherit;
+}
+
+.icon {
+    filter: var(--icon-color);
+}
+
+h1,
+h2 {
+    font-family: var(--font-roboto-slab);
+}
+
+.sub-title {
+    font-family: var(--font-roboto-slab);
+    font-size: 1.8rem;
+    line-height: 1.7;
+}
+
+.heading-primary {
+    font-size: 6rem;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.heading-secondary {
+    font-size: 4.2rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.description {
+    color: #586863;
+    font-size: 1.8rem;
+    line-height: 1.7;
+}
