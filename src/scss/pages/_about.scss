@@ -34,6 +34,7 @@
   }
 
   &__button {
+    background-color: #000;
     @include abstracts.screen(md) {
       --height: 40px;
 
@@ -184,6 +185,10 @@
     }
   }
 
+  &__item {
+    width: 100%;
+  }
+
   &__content {
     display: flex;
     flex-direction: column;
@@ -232,6 +237,7 @@
   }
 
   &__button {
+    background-color: #000;
     @include abstracts.screen(md) {
       --height: 42px;
 
@@ -285,6 +291,10 @@
     }
   }
 
+  &__button {
+    background-color: #000;
+  }
+
   .contact {
     &-form {
       margin-top: 40px;
@@ -299,6 +309,7 @@
         @include abstracts.screen(sm) {
           flex-direction: column-reverse;
           align-items: flex-start;
+          line-height: 20px;
         }
       }
     }
@@ -349,7 +360,6 @@
 
       border: 1px solid #f9f6f6;
 
-      border-radius: 15px;
 
       &:hover {
         border-color: transparent;
@@ -373,6 +383,10 @@
     }
 
     &__info {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
       position: relative;
       padding: 20px 20px 30px;
 
@@ -415,5 +429,14 @@
       color: #586863;
       line-height: 1.75;
     }
+  }
+}
+
+.direction { 
+  display: flex;
+  flex-direction: row;
+  @include abstracts.screen(md) {
+    display: flex;
+    flex-direction: column-reverse;
   }
 }

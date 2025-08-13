@@ -21,6 +21,7 @@
 
   &__description {
     margin-top: 20px;
+    width: 470px;
 
     @include abstracts.screen(md) {
       margin-top: 12px;
@@ -159,6 +160,8 @@
 
   &__sub-heading {
     color: var(--color-secondary);
+    font-size: 30px;
+    margin-bottom: 20px;
 
     @include abstracts.screen(md) {
       font-size: 1rem;
@@ -282,6 +285,8 @@
 
   &__sub-heading {
     color: var(--color-secondary);
+    font-size: 30px;
+    margin-bottom: 20px;
 
     @include abstracts.screen(md) {
       font-size: 1rem;
@@ -395,6 +400,8 @@
 
   &__sub-heading {
     color: var(--color-secondary);
+    font-size: 30px;
+    margin-bottom: 20px;
 
     @include abstracts.screen(md) {
       font-size: 1rem;
@@ -563,6 +570,8 @@
 
   &__sub-heading {
     color: var(--color-secondary);
+    font-size: 30px;
+    margin-bottom: 20px;
 
     @include abstracts.screen(md) {
       font-size: 1rem;
@@ -776,6 +785,8 @@
 
   &__sub-heading {
     color: var(--color-secondary);
+    font-size: 30px;
+    margin-bottom: 20px;
 
     @include abstracts.screen(md) {
       font-size: 1rem;
@@ -950,6 +961,8 @@
 
   &__sub-heading {
     color: var(--color-secondary);
+    font-size: 30px;
+    margin-bottom: 20px;
 
     @include abstracts.screen(md) {
       font-size: 1rem;
@@ -1063,6 +1076,8 @@
 
   &__sub-heading {
     color: var(--color-secondary);
+    font-size: 30px;
+    margin-bottom: 20px;
 
     @include abstracts.screen(md) {
       font-size: 1rem;

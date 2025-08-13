@@ -15,7 +15,7 @@ export default defineConfig({
 
     build: {
         // Nơi xuất ra sản phẩm sau khi build
-        outDir: "./dist",
+        outDir: "../dist",
         emptyOutDir: true,
 
         // Khai báo các trang cần build (nhiều trang)

@@ -114,14 +114,14 @@
     position: absolute;
     top: 50%;
     left: -70px;
-    width: 30%;
+    width: 23%;
     height: 30%;
     z-index: 1;
 
     transform: translateY(-50%);
 
     @include abstracts.screen(lg) {
-      left: -100px;
+      left: -34px;
       width: 30%;
       height: 30%;
     }
@@ -166,10 +166,12 @@
   &__description {
     width: 470px;
     max-width: 100%;
+    margin-top: 20px;
   }
 
   &__heading {
     color: #fff;
+    font-size: 42px;
 
     @include abstracts.screen(md) {
       font-size: 3rem;
